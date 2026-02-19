@@ -85,6 +85,7 @@ impl<'de> Deserialize<'de> for LanguageId {
             "kotlin" => "kotlin",
             "lua" => "lua",
             "php" => "php",
+            "ruby" => "ruby",
             "python" => "python",
             "rust" => "rust",
             "swift" => "swift",
@@ -389,6 +390,7 @@ fn initialize_registry(registry: &mut LanguageRegistry) {
     super::java::register(registry);
     super::kotlin::register(registry);
     super::lua::register(registry);
+    super::ruby::register(registry);
     super::swift::register(registry);
 }
 

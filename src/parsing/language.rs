@@ -21,6 +21,7 @@ pub enum Language {
     Java,
     Kotlin,
     Lua,
+    Ruby,
     Swift,
 }
 
@@ -45,6 +46,7 @@ impl Language {
             Language::Java => super::LanguageId::new("java"),
             Language::Kotlin => super::LanguageId::new("kotlin"),
             Language::Lua => super::LanguageId::new("lua"),
+            Language::Ruby => super::LanguageId::new("ruby"),
             Language::Swift => super::LanguageId::new("swift"),
         }
     }
@@ -68,6 +70,7 @@ impl Language {
             "java" => Some(Language::Java),
             "kotlin" => Some(Language::Kotlin),
             "lua" => Some(Language::Lua),
+            "ruby" => Some(Language::Ruby),
             "swift" => Some(Language::Swift),
             _ => None,
         }
@@ -106,6 +109,7 @@ impl Language {
             "java" => Some(Language::Java),
             "kt" | "kts" => Some(Language::Kotlin),
             "lua" => Some(Language::Lua),
+            "rb" | "rake" | "gemspec" | "ru" => Some(Language::Ruby),
             "swift" => Some(Language::Swift),
             _ => None,
         }
@@ -136,6 +140,7 @@ impl Language {
             Language::Java => &["java"],
             Language::Kotlin => &["kt", "kts"],
             Language::Lua => &["lua"],
+            Language::Ruby => &["rb", "rake", "gemspec", "ru"],
             Language::Swift => &["swift"],
         }
     }
@@ -156,6 +161,7 @@ impl Language {
             Language::Java => "java",
             Language::Kotlin => "kotlin",
             Language::Lua => "lua",
+            Language::Ruby => "ruby",
             Language::Swift => "swift",
         }
     }
@@ -176,6 +182,7 @@ impl Language {
             Language::Java => "Java",
             Language::Kotlin => "Kotlin",
             Language::Lua => "Lua",
+            Language::Ruby => "Ruby",
             Language::Swift => "Swift",
         }
     }
